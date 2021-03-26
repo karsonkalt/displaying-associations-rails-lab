@@ -1,0 +1,8 @@
+<h1>Artists</h1>
+  <% @artists.each do |p| %>
+    <li>
+      <%= link_to p.name, artist_path(p) %>
+      (<%= p.songs.count %> <%= "song".pluralize(p.songs.count) %>)
+    </li>
+  <% end %>
+</ul>
